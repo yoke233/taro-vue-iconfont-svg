@@ -1,7 +1,7 @@
 {
-  "name": "taro-iconfont-svg",
-  "version": "1.0.17",
-  "description": "通过 background:url(data:svg+xml....) 的形式 在小程序上把 SVG 字体图标显示出来",
+  "name": "taro-vue-iconfont-svg",
+  "version": "1.0.18",
+  "description": "vue版本 通过 background:url(data:svg+xml....) 的形式 在小程序上把 SVG 字体图标显示出来",
   "keywords": [
     "taro",
     "iconfont",
@@ -10,13 +10,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HongxuanG/taro-iconfont-svg.git"
+    "url": "https://github.com/yoke233/taro-vue-iconfont-svg.git"
   },
   "author": "ghx",
   "main": "index.js",
   "bin": {
-    "iconfont-init": "./build/commands/createJson.js",
-    "iconfont-taro": "./build/commands/index.js"
+    "iconfont-init": "./commands/createJson.js",
+    "iconfont-taro": "./commands/index.js"
   },
   "scripts": {
     "build": "bash ./build.sh",
@@ -50,5 +50,5 @@
     "tslib": "^2.4.0",
     "typescript": "^4.8.3"
   },
-  "homepage": "https://github.com/HongxuanG/taro-iconfont-svg"
+  "homepage": "https://github.com/yoke233/taro-vue-iconfont-svg"
 }
