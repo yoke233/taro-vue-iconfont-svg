@@ -1,4 +1,6 @@
-# Taro-iconfont-svg
+# Taro-vue-iconfont-svg
+
+vue版本
 
 > 灵感来源：[taro-iconfont-cli](https://github.com/iconfont-cli/taro-iconfont-cli) 
 
