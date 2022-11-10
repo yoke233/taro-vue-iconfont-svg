@@ -24,14 +24,8 @@ export const genComponents = (data: XmlData, config: Config) => {
 
     names.push(iconId)
     svgTemplates.push(
-      `{/* ${iconId} */}\n
-      { name === '${iconId}' && (<View style={{backgroundImage: #que#url(#$#{quot}data:image/svg+xml, ${generateCase(
-        item,
-        {
-          hexToRgb: true,
-        }
-      )}#$#{quot})#que#,` +
-        ' width: #que##$#{svgSize}px#que#, height: #que##$#{svgSize}px#que#, ...customStyle}} className={classnames("icon", customClassName)} />) }\n'
+      ` <!-- ${iconId} -->\n
+      <view v-if="name === '${iconId}'" :style="{backgroundImage: #que#url(#$#{quot}data:image/svg+xml,${generateCase(item, { hexToRgb: true })} #$#{quot})#que#,width: #que##$#{svgSize}px#que#, height: #que##$#{svgSize}px#que#, ...customStyle}" :class="classnames('icon', customClassName)" /> \n`,
     )
 
     console.log(
@@ -43,7 +37,7 @@ export const genComponents = (data: XmlData, config: Config) => {
     path.join(saveDir, `${fileName}.scss`),
     getTemplate('index.scss'),
   )
-  let tsxFile = getTemplate('index.tsx')
+  let tsxFile = getTemplate('index.vue')
 
   tsxFile = replaceSize(tsxFile, config.default_icon_size)
 
@@ -53,7 +47,7 @@ export const genComponents = (data: XmlData, config: Config) => {
 
   tsxFile = replaceStyleName(tsxFile, fileName)
 
-  fs.writeFileSync(path.join(saveDir, `${fileName}.tsx`), tsxFile)
+  fs.writeFileSync(path.join(saveDir, `${fileName}.vue`), tsxFile)
   console.log(
     `\n${colors.green('√')} All icons have been putted into dir: ${colors.green(
       config.save_dir,

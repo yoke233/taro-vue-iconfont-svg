@@ -15,8 +15,8 @@
   "author": "ghx",
   "main": "index.js",
   "bin": {
-    "iconfont-init": "./commands/createJson.js",
-    "iconfont-taro": "./commands/index.js"
+    "iconfont-init": "./build/commands/createJson.js",
+    "iconfont-taro": "./build/commands/index.js"
   },
   "scripts": {
     "build": "bash ./build.sh",
