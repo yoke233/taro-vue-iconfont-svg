@@ -12,8 +12,8 @@ import { ref, watchEffect } from 'vue'
 
 const quot = '"'
 
-const classnames = (prefix: string, name: string) => {
-  return `${prefix}-${name}`
+const classnames = () => {
+  return `iconfont ${props.name} ${props.customClassName}`
 }
 
 function hex2rgb(hex) {

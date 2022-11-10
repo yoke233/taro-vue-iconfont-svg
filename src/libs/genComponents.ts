@@ -25,7 +25,7 @@ export const genComponents = (data: XmlData, config: Config) => {
     names.push(iconId)
     svgTemplates.push(
       ` <!-- ${iconId} -->\n
-      <view v-if="name === '${iconId}'" :style="{backgroundImage: #que#url(#$#{quot}data:image/svg+xml,${generateCase(item, { hexToRgb: true })} #$#{quot})#que#,width: #que##$#{svgSize}px#que#, height: #que##$#{svgSize}px#que#, ...customStyle}" :class="classnames('icon', customClassName)" /> \n`,
+      <view v-if="name === '${iconId}'" :style="{backgroundImage: #que#url(#$#{quot}data:image/svg+xml,${generateCase(item, { hexToRgb: true })} #$#{quot})#que#,width: #que##$#{svgSize}px#que#, height: #que##$#{svgSize}px#que#, ...customStyle}" :class="classnames()" /> \n`,
     )
 
     console.log(
